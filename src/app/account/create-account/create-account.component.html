@@ -1,0 +1,81 @@
+<mat-card>
+  <form (submit)="onFinalizarCadastro(usuarioForm)" #usuarioForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Nome"
+        name="nome"
+        ngModel
+        required
+        #nome="ngModel"
+      />
+      <mat-error *ngIf="nome.invalid">Digite um nome </mat-error>
+    </mat-form-field>
+    <hr />
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Email"
+        name="email"
+        ngModel
+        required
+        #email="ngModel"
+      />
+      <mat-error *ngIf="email.invalid">Digite um email </mat-error>
+    </mat-form-field>
+    <hr />
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="Senha"
+        name="senha"
+        ngModel
+        required
+        #senha="ngModel"
+      />
+      <mat-error *ngIf="senha.invalid">Digite uma senha</mat-error>
+    </mat-form-field>
+    <hr />
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="Confirmação de senha"
+        name="confirmacaodesenha"
+        ngModel
+        required
+        #confirmacaodesenha="ngModel"
+      />
+      <mat-error *ngIf="confirmacaodesenha.invalid"
+        >Digite a senha corretamente</mat-error
+      >
+    </mat-form-field>
+    <hr />
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Data de nascimento"
+        name="datadenascimento"
+        ngModel
+        required
+        #datadenascimento="ngModel"
+      />
+      <mat-error *ngIf="datadenascimento.invalid"
+        >Digite a sua data de nascimento</mat-error
+      >
+    </mat-form-field>
+    <hr />
+
+    <button
+      routerLink=""
+      style="margin-top: 1rem; margin-left: 2rem"
+      mat-raised-button
+    >
+      Finalizar cadastro
+    </button>
+  </form>
+</mat-card>
